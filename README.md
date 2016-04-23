@@ -47,6 +47,14 @@ Scorer.get_score(age: 42, income: 53000, zipcode: '42042')
 
 => #<Scorer::Score:0x007ffd50a137b8 @propensity=86, @ranking="B">
 
+Scorer.get_score(age: 22, income: 19400)
+
+=> #<Scorer::Score:0x007ffb20a137b8 @propensity=36, @ranking="D">
+
+Scorer.get_score(zipcode: '90210')
+
+=> #<Scorer::Score:0x007ffb20a137b8 @propensity=99, @ranking="A">
+
 ```
 
 The age, income, and ZIP code arguments are optional, but you must provide at least one. Age has to be a positive integer. Income has to be a positive number (integer or float). ZIP code has to be a string of either 5 or 9 digits.
