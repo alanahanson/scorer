@@ -10,8 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["alanahanson@gmail.com"]
 
   spec.summary       = "This gem helps users integrate with a hypothetical API, which provides consumer scoring advice based on income, age, and ZIP code."
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/alanahanson/scorer"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org by setting 'allowed_push_host', or
