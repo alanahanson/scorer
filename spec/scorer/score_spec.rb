@@ -6,6 +6,7 @@ describe Scorer::Score do
 
   context "upon initialization" do 
     it "is a Score object" do
+      p score
       expect(score.class).to eq(Scorer::Score)
     end
 

@@ -2,6 +2,10 @@
 
 This gem helps users integrate with a hypothetical API, which provides consumer scoring advice based on income, age, and ZIP code.
 
+## Dependencies
+
+Before using, install ruby 2.3.0 and Bundler ~>1.11
+
 ## Installation
 
 Clone this repo to your machine:
@@ -23,6 +27,7 @@ Then execute:
 ```
 $ bundle
 ```
+
 ## Usage
 
 Start out by adding this line to your Ruby file:
@@ -31,18 +36,32 @@ Start out by adding this line to your Ruby file:
 require 'scorer'
 ```
 
+This module has one method - `get_score`. This method takes between 1 and 3 arguments (income, age, and ZIP code) in a hash and returns a Score (an object) with 'propensity' and 'ranking' methods.
 
+Example:
 
-## Development
+```ruby
+require 'scorer'
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Scorer.get_score(age: 42, income: 53000, zipcode: '42042')
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+=> #<Scorer::Score:0x007ffd50a137b8 @propensity=86, @ranking="B">
+
+```
+
+The age, income, and ZIP code arguments are optional, but you must provide at least one. Age has to be a positive integer. Income has to be a positive number (integer or float). ZIP code has to be a string of either 5 or 9 digits.
+
+## Testing
+
+To run test suite, enter: 
+
+```
+rake spec
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/scorer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
+Bug reports and pull requests are welcome on GitHub at https://github.com/alanahanson/scorer. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
