@@ -5,29 +5,31 @@ This gem helps users integrate with a hypothetical API, which provides consumer 
 ## Installation
 
 Clone this repo to your machine:
-
+```
 $ git clone https://github.com/alanahanson/scorer.git
-
+```
 Navigate into the repo:
-
+```
 $ cd scorer
-
+```
 And enter:
 
+```
 $ gem build SCORER.gemspec
 $ gem install scorer-0.1.0.gem
+```
 
 Then execute:
-
+```
 $ bundle
-
+```
 ## Usage
 
 Start out by adding this line to your Ruby file:
 
-'''ruby
+```ruby
 require 'scorer'
-'''
+```
 
 
 
