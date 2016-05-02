@@ -5,7 +5,7 @@ module Scorer
       @income = options[:income]
       @zipcode = options[:zipcode]
       @age = options[:age]
-      @base_url = "http://not_real.com/customer_scoring"
+      @base_url = "https://warm-dawn-39677.herokuapp.com/"
     end
 
     def url
@@ -37,7 +37,7 @@ module Scorer
     end
 
     def income_valid?
-      income.is_a?(Numeric) && income >= 0
+      (income.is_a?(Numeric) && income >= 0)
     end
 
     def zipcode_param
